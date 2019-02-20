@@ -18,7 +18,6 @@ logging.basicConfig(level=eval(info_level), format='%(asctime)s - %(name)s - %(l
 
 
 async def main():
-    # server = await asyncio.start_server(handler, "172.19.113.87", 2222, start_serving=False)
     server = await asyncio.start_server(handler, "localhost", 8899, start_serving=False)
     async with server:
         logger.info("server running")
